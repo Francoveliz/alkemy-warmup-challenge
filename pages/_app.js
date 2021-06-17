@@ -10,7 +10,6 @@ import Head from "next/head";
 import { AppProvider } from "../context/context";
 
 function MyApp({ Component, pageProps }) {
-	console.log(AppProvider);
 	return (
 		<>
 			<Head>
@@ -18,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 					name="viewport"
 					content="width=device-width, initial-scale=1"
 				/>
-			</Head>{" "}
+			</Head>
 			<AppProvider>
 				<div className="container">
 					<Component {...pageProps} />
