@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 			</Head>
 			<AppProvider>
-				<div className="container">
+				<div className="container ">
 					<Component {...pageProps} />
 				</div>
 			</AppProvider>
