@@ -1,13 +1,12 @@
+import Head from "next/head";
+import { Navbar } from "../components";
+import { AppProvider } from "../context/context";
 //bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
 //bootstrap icons css
 import "bootstrap-icons/font/bootstrap-icons.css";
 //global css
 import "../styles/globals.css";
-
-import Head from "next/head";
-
-import { AppProvider } from "../context/context";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -19,7 +18,8 @@ function MyApp({ Component, pageProps }) {
 				/>
 			</Head>
 			<AppProvider>
-				<div className="container ">
+				<Navbar />
+				<div data-mdb-perfect-scrollbar="true" className="container py-5 ">
 					<Component {...pageProps} />
 				</div>
 			</AppProvider>

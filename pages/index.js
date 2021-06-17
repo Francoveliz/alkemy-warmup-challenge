@@ -4,7 +4,7 @@ import fetchPosts from "../context/fetchPosts";
 export default function Home({ posts }) {
 	return (
 		<div>
-			<div className="d-grid gap-3 my-5">
+			<div className="d-grid gap-3 ">
 				{posts.map(post => (
 					<ListItem key={post.id} {...post} />
 				))}
