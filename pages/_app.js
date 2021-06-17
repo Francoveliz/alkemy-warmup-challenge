@@ -1,8 +1,16 @@
-import Head from "next/head";
+//bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
+//bootstrap icons css
+import "bootstrap-icons/font/bootstrap-icons.css";
+//global css
 import "../styles/globals.css";
 
+import Head from "next/head";
+
+import { AppProvider } from "../context/context";
+
 function MyApp({ Component, pageProps }) {
+	console.log(AppProvider);
 	return (
 		<>
 			<Head>
@@ -10,8 +18,12 @@ function MyApp({ Component, pageProps }) {
 					name="viewport"
 					content="width=device-width, initial-scale=1"
 				/>
-			</Head>
-			<Component {...pageProps} />
+			</Head>{" "}
+			<AppProvider>
+				<div className="container">
+					<Component {...pageProps} />
+				</div>
+			</AppProvider>
 		</>
 	);
 }
