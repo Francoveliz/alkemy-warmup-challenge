@@ -22,7 +22,7 @@ const Navbar = () => {
 						</li>
 						<li className="nav-item ms-3">
 							<Link className="nav-link" href="/post/new">
-								Edicion
+								New Post
 							</Link>
 						</li>
 					</ul>
