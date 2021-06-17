@@ -26,10 +26,8 @@ const EditPost = ({ post }) => {
 				<Form>
 					<label htmlFor="title">title</label>
 					<Field id="title" name="title" />
-
 					<label htmlFor="body">Body</label>
 					<Field id="body" name="body" />
-
 					<button type="submit">Submit</button>
 				</Form>
 			</Formik>
