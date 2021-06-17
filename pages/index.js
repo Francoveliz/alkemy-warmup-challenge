@@ -1,20 +1,7 @@
-import { useEffect, useState } from "react";
 import { ListItem } from "../components";
-import { useAppContext } from "../context/context";
+import fetchPosts from "../context/fetchPosts";
 
-export default function Home() {
-	const { fetchPosts } = useAppContext();
-	const [posts, setPosts] = useState([]);
-
-	const setUpPosts = async () => {
-		const data = await fetchPosts();
-		setPosts(data);
-	};
-
-	useEffect(() => {
-		setUpPosts();
-	}, []);
-
+export default function Home({ posts }) {
 	return (
 		<div>
 			<div className="d-grid gap-3 my-5">
@@ -24,4 +11,11 @@ export default function Home() {
 			</div>
 		</div>
 	);
+}
+
+export async function getServerSideProps() {
+	const posts = await fetchPosts();
+	return {
+		props: { posts },
+	};
 }
