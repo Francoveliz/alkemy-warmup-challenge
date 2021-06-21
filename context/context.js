@@ -1,11 +1,14 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import fetchPosts from "./fetchPosts";
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+	const [userIsLogged, setUserIsLogged] = useState(false);
+
 	return (
-		<AppContext.Provider value={{ fetchPosts }}>
+		<AppContext.Provider
+			value={{ fetchPosts, userIsLogged, setUserIsLogged }}>
 			{children}
 		</AppContext.Provider>
 	);

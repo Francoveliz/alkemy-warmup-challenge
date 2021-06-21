@@ -17,7 +17,9 @@ const NewPost = () => {
 					}
 				}}>
 				<Form>
-					<label htmlFor="title">title</label>
+					<label htmlFor="title" className="form-label">
+						title
+					</label>
 					<Field id="title" name="title" />
 					<label htmlFor="body">Body</label>
 					<Field as="textarea" id="body" name="body" />

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useAppContext } from "../context/context";
 import Head from "next/head";
 import { Navbar } from "../components";
 import { AppProvider } from "../context/context";
@@ -7,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 //global css
 import "../styles/globals.css";
+import { Auth } from "../components";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -18,10 +21,14 @@ function MyApp({ Component, pageProps }) {
 				/>
 			</Head>
 			<AppProvider>
-				<Navbar />
-				<div data-mdb-perfect-scrollbar="true" className="container py-5 ">
-					<Component {...pageProps} />
-				</div>
+				<Auth>
+					<Navbar />
+					<div
+						data-mdb-perfect-scrollbar="true"
+						className="container py-5 ">
+						<Component {...pageProps} />
+					</div>
+				</Auth>
 			</AppProvider>
 		</>
 	);
