@@ -42,7 +42,7 @@ const Login = () => {
 
 	return (
 		<>
-			<div className="w-50 d-flex justify-content-center align-items-center">
+			<div className="d-flex justify-content-center align-items-center min-vh-100">
 				<Formik
 					initialValues={initialValues}
 					onSubmit={(values, { setErrors }) =>
@@ -51,7 +51,7 @@ const Login = () => {
 					validate={values => validate(values)}>
 					{({ errors }) => (
 						<Form>
-							<div>
+							<div className="mb-3">
 								<label htmlFor="email" className="form-label">
 									Email
 								</label>
@@ -60,7 +60,7 @@ const Login = () => {
 									<p className="form-text text-danger">{errors.email}</p>
 								)}
 							</div>
-							<div>
+							<div className="mb-4">
 								<label htmlFor="password" className="form-label">
 									Password
 								</label>
