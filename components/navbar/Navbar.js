@@ -13,14 +13,17 @@ const Navbar = () => {
 					type="button">
 					<span className="navbar-toggler-icon" />
 				</button>
-				<div className={` ${navOpen ? "d-block" : "d-none"} d-sm-block `}>
+				<div
+					className={` ${
+						navOpen ? "d-block" : "d-none"
+					} d-sm-block align-self-center align-self-sm-end`}>
 					<ul className="navbar-nav ms-0 me-auto">
-						<li className="nav-item ms-3">
+						<li className="nav-item ms-3 pb-3 pb-sm-0">
 							<Link className="nav-link " href="/">
 								Home
 							</Link>
 						</li>
-						<li className="nav-item ms-3">
+						<li className="nav-item ms-3 pb-3 pb-sm-0">
 							<Link className="nav-link" href="/post/new">
 								New Post
 							</Link>
