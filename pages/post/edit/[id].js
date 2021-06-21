@@ -24,11 +24,31 @@ const EditPost = ({ post }) => {
 					}
 				}}>
 				<Form>
-					<label htmlFor="title">title</label>
-					<Field id="title" name="title" />
-					<label htmlFor="body">Body</label>
-					<Field as="textarea" id="body" name="body" />
-					<button type="submit">Submit</button>
+					<div className="mb-3">
+						<label
+							htmlFor="title"
+							className="form-label text-primary fw-bold">
+							Title
+						</label>
+						<Field id="title" name="title" className="form-control" />
+					</div>
+					<div className="mb-3 h-50">
+						<label
+							htmlFor="body"
+							className="form-label text-primary fw-bold">
+							Body
+						</label>
+						<Field
+							as="textarea"
+							id="body"
+							name="body"
+							className="form-control "
+							style={{ height: "20rem" }}
+						/>
+					</div>
+					<button type="submit" className="btn btn-primary">
+						Submit
+					</button>
 				</Form>
 			</Formik>
 		</>
